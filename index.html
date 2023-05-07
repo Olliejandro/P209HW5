@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- what came with the template --> 
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
-  <!-- Our code is here --> 
-    <script src="script.js"></script>
-  
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- what came with the template -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <!-- Our code is here --> 
+  <script src="main.js"></script>
 <!-- Comment out for his code from the PPT
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -21,121 +19,140 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 -->
 
-
-    <title>Notes</title>
+  <title>Tracking page</title>
 </head>
-<body>
-    
-<div data-role="page" id="home">
 
-    <!-- header --> 
+<body> 
+
+  <div data-role="page" id="home">
+
+    <!-- header -->
     <div data-role="header" data-theme='e'>
-  
-    <div data-role="navbar" data-theme='e'>
+
+      <div data-role="navbar" data-theme='e'>
         <ul>
-        <li><a href="#show" data-transition="slideup">Your Notes</a></li>
-        <li><a href="#add" data-transition="slideup">Add New Note</a></li>
+          <li><a href="#show" data-transition="slideup">Your Saved Restaurant</a></li>
+          <li><a href="#add" data-transition="slideup">Add a favorite Restaurant</a></li>
+     
         </ul>
-    </div>
-    <h2>Welcome to Notes</h2>
+      </div>
+      <h2>Welcome to your Late Night @ BC</h2>
+      <h2>We list all the place that are open </h2>
     </div>
 
     <!-- content -->
     <div data-role="content" data-theme='a'>
-        You can keep notes in this website.<br><br>
-        <img src="images/note.jpg" alt="picture of notes">
+      Resturant Near by <br><br>
+      <div class="restaurant">
+      <div class="restaurant-info">
+        <div class="restaurant-name">Restaurant 1</div>
+        <div class="restaurant-hours">Open Today: 9am - 10pm</div>
+      </div>
+      <div class="restaurant-countdown" data-time="10:00:00"></div>
     </div>
     
+    <div class="restaurant">
+      <div class="restaurant-info">
+        <div class="restaurant-name">Restaurant 2</div>
+        <div class="restaurant-hours">Open Today: 8am - 11pm</div>
+      </div>
+      <div class="restaurant-countdown" data-time="11:00:00"></div>
+    </div>
+    
+    <div class="restaurant">
+      <div class="restaurant-info">
+        <div class="restaurant-name">Restaurant 3</div>
+        <div class="restaurant-hours">Open Today: 11am - 9pm</div>
+      </div>
+      <div class="restaurant-countdown" data-time="21:00:00"></div>
+    </div>
 
+    </div>
 
-    <!-- notes footer --> 
+    <!-- notes footer -->
     <div data-role="footer" data-theme='b'>
-    <h3>Copyrigtht 2022 by Kurt Friedrich</h3>
+      <h3> FOOTER Social - Media </h3>
     </div>
 
-</div>   <!-- end of page --------------------------------------------> 
+  </div> <!-- end of page -------------------------------------------->
 
-  
+  <div data-role="page" id="show">
 
-<div data-role="page" id="show">
-    
-    <!-- header --> 
+    <!-- header -->
     <div data-role="header" data-theme='e'>
-        <!-- /navbar -->
-        <div data-role="navbar" data-theme='e'>
-            <ul>
-            <li><a href="#home" data-transition="pop" >Home Page</a></li>
-            <li><a href="#add" data-transition="pop" >Add New Notes</a></li>
-            </ul>
-        </div>
-    <h2>Here are Your Notes</h2>
-    <br><br>
- 
+      <!-- /navbar -->
+      <div data-role="navbar" data-theme='e'>
+        <ul>
+          <li><a href="#home" data-transition="pop">Open Restaurants Database</a></li>
+          <li><a href="#add" data-transition="pop">Add a favorite Restaurant</a></li>
+        </ul>
+      </div>
+      <h2>Here are Your Saved Places</h2>
+      <br><br>
+
     </div>
 
     <!-- content -->
     <div data-role="content" data-theme='c'>
-        <ul id="myul" data-role="listview"></ul>  
+      <ul id="myul" data-role="listview"></ul>
     </div>
 
-    <!-- notes footer --> 
+    <!-- notes footer -->
     <div data-role="footer" data-theme='b'>
-    <h3>Copyrigtht 2022 by Kurt Friedrich</h3>
+      <h3>Footer</h3>
     </div>
 
-</div>   <!-- end of page -----------------------------------> 
+  </div> <!-- end of page ----------------------------------->
 
+  <div data-role="page" id="add">
 
-<div data-role="page" id="add">
-
-    <!-- header --> 
+    <!-- header -->
     <div data-role="header" data-theme='e'>
-         <div data-role="navbar" data-theme='e'>
-            <ul>
-            <li><a href="#home" data-transition="flip" >Home Page</a></li>
-            <li><a href="#show" data-transition="flip">Your Notes</a></li>
-            </ul>
-        </div>
-    <h2>Add a New Note</h2>
+      <div data-role="navbar" data-theme='e'>
+        <ul>
+          <li><a href="#home" data-transition="flip">Open Restaurants Database</a></li>
+          <li><a href="#show" data-transition="flip">Your Saved Restaurant</a></li>
+        </ul>
+      </div>
+      <h2>Add a New Note</h2>
     </div>
 
     <!-- content -->
     <div data-role="content" data-theme='d'>
- 
-    Enter note priority <br />
-    <input type="text" value="" id="priorityInput" /><br />
-    Enter the note<br>
-    <input type="text" value="" id="dataInput" />
 
-    <label for="select-type">Select a Type</label>
-    <select name="select-type" id="select-type">
+      Enter note priority <br />
+      <input type="text" value="" id="priorityInput" /><br />
+      Enter the note<br>
+      <input type="text" value="" id="dataInput" />
+
+      <label for="select-type">Select a Type</label>
+      <select name="select-type" id="select-type">
         <option value="College">College</option>
         <option value="Work">Work</option>
         <option value="Home">Home</option>
-    </select>
+      </select>
 
-    <button id="buttonAdd">Add Note</button>
-    <br>
+      <button id="buttonAdd">Add Note</button>
+      <br>
 
-        <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">What next?</a>
-        <div data-role="popup" id="popupMenu" data-theme="b">
+      <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">What next?</a>
+      <div data-role="popup" id="popupMenu" data-theme="b">
         <ul data-role="listview" data-inset="true" style="min-width:210px;">
-        <li data-role="list-divider">Choose an action</li>
-        <li><a href="#home" data-transition="flow" >Back to Home</a></li>
-        <li><a href="#show" data-transition="fade" >Show Notes</a></li>
+          <li data-role="list-divider">Choose an action</li>
+          <li><a href="#home" data-transition="flow">Back to Home</a></li>
+          <li><a href="#show" data-transition="fade">Show Notes</a></li>
         </ul>
-        </div>
-        
+      </div>
+
     </div>
 
-    <!-- notes footer --> 
+    <!-- notes footer -->
     <div data-role="footer" data-theme='b'>
-    <h3>Copyrigtht 2022 by Kurt Friedrich</h3>
+      <h3>Footer</h3>
     </div>
 
-</div>  <!-- end of page ---------------------------------------> 
-    
-
+  </div> <!-- end of page --------------------------------------->
 
 </body>
+
 </html>
