@@ -6,10 +6,6 @@ let NoteObject = function (pData, pType, pPriority) {
     this.priority = pPriority;
 };
 
-NoteArray.push ( new NoteObject("Eat Lunch", "Home", 1)  );
-NoteArray.push ( new NoteObject("Do 209 HW", "School", 2)  );
-NoteArray.push ( new NoteObject("Watch Dune", "Home", 3)  );
-
 let selectedType = "";
 
 // code runs immediately
