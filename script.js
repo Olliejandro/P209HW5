@@ -5,12 +5,30 @@ let NoteObject = function (pData, pType, pPriority) {
     this.type = pType;
     this.priority = pPriority;
 };
+const restaurants = [
+  { name: "Restaurant 1 test array", closingTime: "20:00:00" },
+  { name: "Restaurant 2 test array", closingTime: "22:00:00" },
+  { name: "Restaurant 3 test array", closingTime: "21:00:00" }
+];
 
 let selectedType = "";
 
 // code runs immediately
 //================================================================
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("buttonAdd").addEventListener("click", function () {
+    const newRestaurant = {
+      name: document.getElementById("restaurantName").value,
+      closingTime: document.getElementById("closingTimeInput").value
+    };
+    restaurants.push(newRestaurant);
 
+    // Clear inputs
+    document.getElementById("restaurantName").value = "";
+    document.getElementById("closingTimeInput").value = "";
+  });
+});
+/*
 // runs  when dom is loaded
 document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -32,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 });
 
-
+*/
 //======================================
 // function defintions
 function createList() {
@@ -51,11 +69,7 @@ function createList() {
 
 
 // creating a restaurant array
-const restaurants = [
-    { name: "Restaurant 1 test array", closingTime: "20:00:00" },
-    { name: "Restaurant 2 test array", closingTime: "22:00:00" },
-    { name: "Restaurant 3 test array", closingTime: "21:00:00" }
-  ];
+
   //Creating a restaurant Class
   const restaurantContainer = document.querySelector("#new-restaurants");
   //copying prof format for Creating an element from array 
